@@ -167,7 +167,7 @@ function setComment($id) {
     var score = $.trim($('#score').val());
 
     //TODO complete implementation using the product id
-    alert("app.js/setComment() not implemented")
+    //alert("app.js/setComment() not implemented")
      $.ajax({
          url: Url+'SetComment',
          type: 'post',
