@@ -66,8 +66,17 @@ function deleteItem($id) {
 }
 
 function checkOut() {
-
+    
+    var email = $.trim($('#email').val()); //get the email
     //TODO complete implementation
-    alert("cart.js/checkOut() is not implemented")
+    //alert("cart.js/checkOut() is not implemented")
 
+    $.ajax({
+        url: Url+'Cart',
+        type: 'post',
+        dataType: 'json',
+        data: JSON.stringify({"email": email}),
+        contentType: 'text/plain',
+
+})
 }
