@@ -56,7 +56,7 @@ function deleteItem($id) {
     //alert("cart.js/deleteItem() is not implemented")
 
     $.ajax({
-        url: Url+'cart{id}',
+        url: Url+'{id}',
         type: 'delete',
         dataType: 'json',
         data: JSON.stringify({"product_id" :$id}),
