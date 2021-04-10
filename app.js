@@ -163,8 +163,8 @@ function fetchComments($id) {
 }
 
 function setComment($id) {
-    var comment = $.trim($('#comment').val());
-    var score = $.trim($('#score').val());
+    var comment = $.trim($('#comment').val()); //get the comment
+    var score = $.trim($('#score').val()); //get the score
 
     //TODO complete implementation using the product id
     //alert("app.js/setComment() not implemented")
@@ -186,7 +186,7 @@ function setComment($id) {
 }
 
 function addToCart($id) {
-    var email = $.trim($('#email').val());
+    var email = $.trim($('#email').val()); //get the email
 
     //TODO complete implementation using the product id
     //alert("app.js/addToCart() not implemented")
