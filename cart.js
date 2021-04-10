@@ -52,7 +52,16 @@ function getCart($email) {
 function deleteItem($id) {
 
     //TODO complete implementation using the product id
-    alert("cart.js/deleteItem() is not implemented")
+    //alert("cart.js/deleteItem() is not implemented")
+
+    $.ajax({
+        url: Url+'cart{id}',
+        type: 'delete',
+        dataType: 'json',
+        data: JSON.stringify({"product_id" :$id}),
+        contentType: 'text/plain',          
+    })
+
 }
 
 function checkOut() {
