@@ -163,7 +163,7 @@ function fetchComments($id) {
 }
 
 function setComment($id) {
-    var comment = $.trim($('#comment').val()); //get the comment
+    var comment = $.trim($('#message-text').val()); //get the comment
     var score = $.trim($('#score').val()); //get the score
 
     //TODO complete implementation using the product id
@@ -173,7 +173,7 @@ function setComment($id) {
          type: 'post',
          dataType: 'json',
          data: JSON.stringify({"product_id" :$id,
-                "message-text": comment,
+                "comment": comment,
                  "score": score}),
          contentType: 'text/plain',
         
