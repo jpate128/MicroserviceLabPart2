@@ -7,6 +7,7 @@ let totalPrice;
 let email = sessionStorage.getItem('email'); //gets the users email from sessionStorage
 
 getCart(email);
+deleteItem(id);
 
 function getCart($email) {
     $.ajax({
