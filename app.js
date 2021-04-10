@@ -176,6 +176,7 @@ function setComment($id) {
                 "comment": comment,
                  "score": score}),
          contentType: 'text/plain',
+        
          
      })
     //HINT
