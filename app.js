@@ -186,10 +186,19 @@ function setComment($id) {
 }
 
 function addToCart($id) {
+    var email = $.trim($('#email').val());
 
     //TODO complete implementation using the product id
-    alert("app.js/addToCart() not implemented")
-
+    //alert("app.js/addToCart() not implemented")
+    $.ajax({
+        url: Url+'AddToCart',
+        type: 'post',
+        dataType: 'json',
+        data: JSON.stringify({"product_id" :$id,
+               "email": email}),
+        contentType: 'text/plain',
+             
+    })
 
 }
 
