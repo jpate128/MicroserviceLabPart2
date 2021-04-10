@@ -186,7 +186,7 @@ function setComment($id) {
 }
 
 function addToCart($id) {
-    let email = $.trim($('#email').val());
+    var email = $.trim($('#email').val());
 
     //TODO complete implementation using the product id
     //alert("app.js/addToCart() not implemented")
