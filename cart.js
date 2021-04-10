@@ -73,7 +73,7 @@ function checkOut() {
 
     $.ajax({
         url: Url+'Cart',
-        type: 'post',
+        type: 'put',
         dataType: 'json',
         data: JSON.stringify({"email": email}),
         contentType: 'text/plain',
