@@ -173,7 +173,7 @@ function setComment($id) {
          type: 'post',
          dataType: 'json',
          data: JSON.stringify({"product_id" :$id,
-                "comment": comment,
+                "message-text": comment,
                  "score": score}),
          contentType: 'text/plain',
         
