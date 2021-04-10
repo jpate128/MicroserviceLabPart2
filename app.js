@@ -163,10 +163,21 @@ function fetchComments($id) {
 }
 
 function setComment($id) {
+    var comment = $.trim($('#comment').val());
+    var score = $.trim($('#score').val());
 
     //TODO complete implementation using the product id
     alert("app.js/setComment() not implemented")
-
+     $.ajax({
+         url: Url+'SetComment',
+         type: 'post',
+         dataType: 'json',
+         data: JSON.stringify({"product_id" :$id,
+                "comment": comment,
+                 "score": score}),
+         contentType: 'text/plain',
+         
+     })
     //HINT
     //Take note of how the Ajax call in app.js/fetchComments() posts a GET request to corresponding API endpoint.
     //Look at the Microservice API Documentation and find out the appripriate type of request for this action.
