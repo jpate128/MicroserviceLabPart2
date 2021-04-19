@@ -65,6 +65,31 @@ function deleteItem($id) {
 
 }
 
+
+function deleteAllItem($id) {
+
+    
+    var items = $.trim($('#items').val()); 
+    
+    for( var i = 0; i < items; i++) {
+
+        $.ajax({
+            url: Url+'Cart/{id}',
+            type: 'delete',
+            dataType: 'json',
+            data: JSON.stringify({"product_id" :$id}),
+            contentType: 'text/plain',  
+
+            success: function (data) {
+                alert("Success.");
+            },
+            error: function (data) {
+                alert("Error.");
+            }        
+        })   
+    }
+}
+
 function checkOut() {
     
     var email = $.trim($('#email').val()); //get the email
